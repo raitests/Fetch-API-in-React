@@ -17,7 +17,7 @@ function App() {
       id: movie.episode_id,
       title: movie.title,
       releaseDate: movie.release_date,
-      openingText: movie.opening_crawl,
+      openingText: opening_crawl,
     };
   });
 
