@@ -11,7 +11,7 @@ function App() {
   const movieRequestHandler = async () => {
     try {
       setIsLoading(true);
-      const res = await fetch("https://swapi.dev/api/film/");
+      const res = await fetch("https://swapi.dev/api/films/");
 
       if (!res.ok) {
         throw new Error("Something went wrong");
@@ -34,9 +34,7 @@ function App() {
     setIsLoading(false);
   };
 
-  const content = (content = (
-    <p>No movies available, Click Fetch to load movies</p>
-  ));
+  var content = <p>No movies available, Click Fetch to load movies</p>;
 
   if (movies.length > 0) content = <MoviesList movies={movies} />;
   if (error) content = <p>{error.message}</p>;
